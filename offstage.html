@@ -37,7 +37,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            will-change: transform, box-shadow;
+            will-change: transform, box-shadow; /* Performance Optimization */
         }
         .event-card:hover {
             transform: translateY(-5px);
@@ -294,7 +294,7 @@
 <script>
     // VANTA.js for Biotech Background - OPTIMIZED
     VANTA.CELLS({
-        el: "#vanta-canvas",
+        el: "#vanta-canvas", // Corrected selector to target the div
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -304,7 +304,6 @@
         scaleMobile: 2.00, // Make cells larger on mobile for better visibility & performance
         color1: 0x6a1b9a,
         color2: 0xf50057,
-        backgroundColor: 0x0d051c,
         size: 3.00,       // Increase cell size
         speed: 1.00       // Decrease speed to reduce CPU load
     });
